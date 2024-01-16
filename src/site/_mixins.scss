@@ -3,6 +3,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 
   @include required-field-style;
   
@@ -320,6 +321,9 @@
 
 @mixin tab-container {
   margin: 0;
+  &--hidden {
+    display: none;
+  }
 }
 
 @mixin vertical-tab {
