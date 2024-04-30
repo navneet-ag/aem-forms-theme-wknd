@@ -12,4 +12,8 @@
   @include fontface('SourceSans', 'SourceSansPro/SourceSansPro-Regular', normal);
   @include fontface('SourceSansSemiBold', 'SourceSansPro/SourceSansPro-SemiBold', bold);
   @include fontface('SourceSansBold', 'SourceSansPro/SourceSansPro-Bold', bolder);
+  @include fontface(titleFont, 'SourceSerifPro/SourceSerifPro-Black', bolder);
+@include fontface(titleFont, 'SourceSerifPro/SourceSerifPro-Bold', bolder);
+@include fontface(titleFont, 'SourceSerifPro/SourceSerifPro-Regular', normal);
+@include fontface(titleFont, 'SourceSerifPro/SourceSerifPro-SemiBold', bold);
   
