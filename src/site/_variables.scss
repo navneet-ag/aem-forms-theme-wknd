@@ -1,5 +1,6 @@
 //== Font
 $font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$title-font-family: titleFont, 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // ====== colors======
 $primary: #ffea00;
@@ -42,3 +43,4 @@ $error-outline: 2px $error solid;
 $border-light: 1px $background-color solid;
 $border-error: 1px $error solid;
 $border-dark: 1px $light-gray solid;
+$font-weight-semi-bold: 500;

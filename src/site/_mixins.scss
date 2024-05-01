@@ -39,13 +39,14 @@
 }
 
 @mixin panel-label {
-  font-family: SourceSerifBold;
+  font-family: $title-font-family;
   font-size: $font-l;
   color: $secondary;
   opacity: 1;
   margin-top: 0;
   margin-bottom: $space-s;
   position: static;
+  font-weight: bold;
 }
 
 @mixin checkbox-label {
@@ -73,7 +74,7 @@
   color: $secondary;
   padding: 0 $space-s;
   font-size: $font-m;
-  font-family: SourceSans;
+  font-family: $font-family;
   border-radius: 0;
   background-color: $white;
   box-shadow: 0 8px 16px 0px rgba($color: #000000, $alpha: .02);
@@ -99,12 +100,11 @@
   display: flex;
   align-items: center;
   font-size: $font-s;
-  font-weight: bold;
+  font-weight: $font-weight-semi-bold;
   padding: $space-s;
   margin: $space-xs 0 $space-s 0;
   @include surface();
   background-color: $white;
-  font-family: SourceSansSemiBold;
 
   &::before {
     content: '';
@@ -123,7 +123,6 @@
   display: flex;
   position: static;
   font-size: $font-s;
-  font-family: SourceSansSemiBold;
   color: $gray;
   margin: 0;
 
@@ -146,7 +145,7 @@
   display: none;
   color: $error;
   font-size: $font-s;
-  font-family: SourceSansSemiBold;
+  font-weight: $font-weight-semi-bold;
   margin: 0;
 
   &::before {
@@ -221,10 +220,10 @@
   cursor: pointer;
   color: $secondary;
   font-size: $font-m;
-  font-family: SourceSansSemiBold;
   margin: $space-s 0;
   text-transform: uppercase;
   width: 100%;
+  font-weight: $font-weight-semi-bold;
 
   /* Full width by default */
   &:hover {
@@ -290,10 +289,10 @@
   list-style: none;
   margin: $space-m 0 $space-s 0;
   text-transform: uppercase;
-  font-family: SourceSansSemiBold;
   max-width: 100%;
   overflow: auto;
   flex-wrap: nowrap;
+  font-weight: $font-weight-semi-bold;
 
 }
 

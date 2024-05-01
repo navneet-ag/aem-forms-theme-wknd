@@ -1,8 +1,8 @@
 .cmp-title__text {
   font-size: $font-xl;
   color: $secondary;
-  font-weight: 500;
-  font-family: SourceSerifBold;
+  font-weight: $font-weight-semi-bold;
+  font-family: $title-font-family;
 }
 
 h1 {
