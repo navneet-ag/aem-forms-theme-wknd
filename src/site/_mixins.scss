@@ -17,6 +17,16 @@
     column-gap: $space-xs;
   }
 
+  &[data-cmp-valid=false] {
+    padding-left: 5px;
+    border-left: 4px solid #ef1f2f;
+  }
+
+  &[data-cmp-valid=true] {
+    padding-left: 5px;
+    border-left: 4px solid #23b482;
+  }
+
   // change the border color when field is invalid
   &[data-cmp-valid=false]>input,
   &[data-cmp-valid=false]>textarea,
@@ -147,20 +157,13 @@
   font-size: $font-s;
   font-weight: $font-weight-semi-bold;
   margin: 0;
-  position: relative;
-  left: 36px;
 
   &::before {
-    background-image: url(./resources/images/busy-state.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 18px;
-    height: 18px;
+    background: url(./resources/images/error.svg) no-repeat center;
+    width: 16px;
+    height: 16px;
     content: '';
     padding-inline-end: 32px;
-    background-size: cover;
-    position: absolute;
-    left: -36px;
   }
 }
 
@@ -214,7 +217,7 @@
       column-gap: $space-xs;
       &::after {
           content: "*";
-          color: #c40000;
+          color: red;
       }
   }
 }
@@ -229,13 +232,38 @@
   font-size: $font-m;
   margin: $space-s 0;
   //text-transform: uppercase;
-  width: 100%;
+  width: max-content;
   font-weight: $font-weight-semi-bold;
-
-  /* Full width by default */
-  &:hover {
-    background-color: $dark-primary;
+  position: relative;
+  border: 2px solid $primary;
+  &::after {
+    content: '';
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" fill="white"/></g></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: 0.4s;
+    right:15px;
   }
+
+  &:hover, &:focus {
+    background-color: $white;
+    color: $uoa-blue;
+    outline: none;
+  }
+
+  &:hover::after, &:focus::after {
+    right: 5px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12" fill="%2300467f"/></g></svg>');
+  }
+  /* Full width by default */
+  //&:hover {
+  //  background-color: $dark-primary;
+  //}
 
   &:disabled {
     background-color: $disabled-color;
