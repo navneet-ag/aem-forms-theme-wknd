@@ -4,10 +4,12 @@
   margin: $space-s 0;
   &__widget {
     @include primary-button;
+    border-radius: 999px;
   }
   &__widget[data-cmp-enabled]:not([data-cmp-enabled=true]) {
     background: $gray;
     color: $very-light-gray;
+    border-radius: 999px;
   }
   @include description;
   &__questionmark{
@@ -18,7 +20,7 @@
 }
 
 .submit {
-  background-color: $white;
+  background-color: $background-color;
   position: sticky;
   bottom: 0;
   z-index: 12;

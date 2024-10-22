@@ -3,10 +3,10 @@ $font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $title-font-family: titleFont, 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // ====== colors======
-$primary: #ffea00;
-$dark-primary: #ebd800;
-$secondary: rgb(22, 22, 22);
-$background-color: #eee;
+$background-color: rgb(239,239, 238);
+$primary: rgb(74, 20, 140);
+$dark-primary: #306;
+$secondary: #4b4d4f;
 $error: #c61d17;
 $light-error: rgba(235,60,54,0.05);
 $white: #fff;
@@ -30,7 +30,7 @@ $space-xl: 120px;
 $field-radius: 12px;
 $button-radius: 4px;
 $tap-height: 48px;
-$field-height: 48px;
+$field-height: 40px;
 
 //== Grid
 $max_col: 12;
